@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Yuk Nikah | Galeri Template</title>
+<style>
+:root {
+  --gold: #c9a45c;
+  --cream: #f8f1e5;
+  --wine: #681f2b;
+  --ink: #30241d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+header {
+  text-align: center;
+  padding: 30px 16px;
+  color: #f9edcf;
+  background: linear-gradient(135deg,#32151c,#762b36,#32151c);
+  border-bottom: 4px double var(--gold);
+}
+.brand {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #e9cb8b;
+}
+h1 { font-size: clamp(27px,6vw,45px); margin: 15px 0 8px; }
+header p { line-height: 1.7; }
+main { max-width: 1050px; margin: auto; padding: 28px 16px; }
+.intro { text-align: center; margin-bottom: 28px; }
+.intro h2 { color: var(--wine); }
+.templates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dfc58c;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px #4c301015;
+}
+.preview {
+  min-height: 240px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 3px double var(--gold);
+  position: relative;
+}
+.preview::before {
+  content: "❧  ✦  ❧";
+  color: var(--gold);
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.preview::after {
+  content: "❦";
+  color: var(--gold);
+  font-size: 30px;
+  margin-top: 14px;
+}
+.preview h3 { font-size: 25px; margin: 10px 0; }
+.preview p { font-size: 12px; letter-spacing: 2px; }
+.jawa { background: #263a2d; color: #f4dfac; }
+.minang { background: #6d1e2b; color: #ffe7ad; }
+.bali { background: #f3e5c9; color: #684328; }
+.melayu { background: #243a56; color: #f1d38d; }
+.modern { background: #eee3d2; color: #584535; }
+.nusantara { background: #4d3027; color: #f8dfaa; }
+.info { padding: 15px; }
+.info h3 { margin: 0 0 8px; }
+.info p { font: 14px/1.6 Arial,sans-serif; color: #6b625a; }
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 7px;
+  padding: 12px;
+  background: var(--wine);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+button:active { opacity: .8; }
+.notice {
+  background: #fffaf0;
+  border: 1px solid #dfc58c;
+  padding: 18px;
+  margin-top: 28px;
+  border-radius: 10px;
+  line-height: 1.7;
+  font: 14px/1.7 Arial,sans-serif;
+}
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 25px 12px;
+  background: #32151c;
+  color: #e9cb8b;
+  font: 12px Arial,sans-serif;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">UNDANGAN YUK NIKAH</div>
+  <h1>Warisan Cinta Nusantara</h1>
+  <p>Undangan istimewa, berbalut tradisi dan kemewahan.</p>
+  <div>✦ ❦ ✦</div>
+</header>
+
+<main>
+  <section class="intro">
+    <h2>Galeri Template</h2>
+    <p>Pilih gaya undangan yang paling mewakili kisah cinta Anda.</p>
+  </section>
+
+  <section class="templates">
+    <article class="card">
+      <div class="preview jawa">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>ADAT JAWA • ELEGAN</p>
+      </div>
+      <div class="info">
+        <h3>01. Royal Jawa</h3>
+        <p>Hijau zamrud, emas, dan inspirasi motif batik.</p>
+        <button onclick="pilih('Royal Jawa')">Pilih Template</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="preview minang">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>ADAT MINANG</p>
+      </div>
+      <div class="info">
+        <h3>02. Minang Megah</h3>
+        <p>Marun mewah dengan sentuhan emas songket.</p>
+        <button onclick="pilih('Minang Megah')">Pilih Template</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="preview bali">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>ADAT BALI</p>
+      </div>
+      <div class="info">
+        <h3>03. Bali Puspa</h3>
+        <p>Warna gading dengan nuansa ukiran tradisional.</p>
+        <button onclick="pilih('Bali Puspa')">Pilih Template</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="preview melayu">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>ADAT MELAYU</p>
+      </div>
+      <div class="info">
+        <h3>04. Melayu Diraja</h3>
+        <p>Biru kerajaan dan ornamen emas yang anggun.</p>
+        <button onclick="pilih('Melayu Diraja')">Pilih Template</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="preview modern">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>NUSANTARA MODERN</p>
+      </div>
+      <div class="info">
+        <h3>05. Klasik Krem</h3>
+        <p>Krem lembut untuk gaya tradisional minimalis.</p>
+        <button onclick="pilih('Klasik Krem')">Pilih Template</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="preview nusantara">
+        <p>THE WEDDING OF</p>
+        <h3>Nama & Pasangan</h3>
+        <p>TRADISI NUSANTARA</p>
+      </div>
+      <div class="info">
+        <h3>06. Pusaka Emas</h3>
+        <p>Cokelat klasik dengan ornamen bernuansa pusaka.</p>
+        <button onclick="pilih('Pusaka Emas')">Pilih Template</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="notice" id="pesan">
+    <strong>Selamat datang!</strong><br>
+    Ini adalah fondasi awal galeri template. Pemilihan saat ini hanya berupa demonstrasi; penyimpanan undangan, editor visual, dan tautan unik akan kita bangun pada tahap selanjutnya.
+  </div>
+</main>
+
+<footer>
+  UNDANGAN YUK NIKAH<br><br>
+  Tradisi yang indah, kenangan selamanya.
+</footer>
+
+<script>
+function pilih(nama) {
+  document.getElementById('pesan').innerHTML =
+    '<strong>Template dipilih: ' + nama +
+    '</strong><br>Pilihan berhasil ditampilkan. Pada tahap berikutnya kita akan membuat editor untuk mengisi data pasangan dan menyimpan undangan.';
+  document.getElementById('pesan').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+}
+</script>
+</body>
+</html>
